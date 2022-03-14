@@ -12,7 +12,7 @@
     <div class="navbar">
       <div class="nav-title"><li><a href="">Vaccination</a></li></div>
       <nav>
-        <ul>
+        <ul id="menuList">
             <li><a href="">Database</a></li>
             <li><a href="">Education</a></li>
             <li><a href="">News</a></li>
@@ -20,7 +20,7 @@
             <li><button type="button">Hoax Buster</button></li>
         </ul>
       </nav>
-      <img src="img/menu-icon.png" class="menu-icon">
+      <img src="img/menu-icon.png" class="menu-icon" onclick="togglemenu()">
     </div>
 
     <div class="row">
@@ -33,9 +33,28 @@
         <h3>Selected Vaccines</h3>
       </div>
       <div class="col-2">
-
+        <img src="img/nurse.png" class="nurse">
+        <div class="color-box"></div>
       </div>
     </div>
   </div>
+    <script>
+
+      var menuList = document.getElementById("menuList");
+
+      menuList.style.maxHeight = "0px";
+
+      function togglemenu(){
+        if (menuList.style.maxHeight = "0px")
+          {
+             menuList.style.maxHeight = "130px";
+          }
+        else
+          {
+            menuList.style.maxHeight = "0px";
+          }
+      }
+    </script>
+
 </body>
 </html>
