@@ -61,6 +61,7 @@ nav{
 
 nav ul{
   margin-right: 5%;
+  margin-bottom: 2%;
 }
 
 nav ul li{
@@ -108,7 +109,7 @@ nav ul li a:hover{
   flex-basis: 40%;
   position: relative;
   margin-left: 90px;
-  bottom: 30%;
+  margin-bottom: 400px;
 }
 .col-1 h2{
   font-size: 50px;
@@ -172,6 +173,11 @@ nav ul li a:hover{
     z-index: 2;
     margin-right: 0;
   }
+  .nav-title{
+    width: 150px;
+    cursor: pointer;
+    margin: 30px 25px;
+  }
   nav ul li{
     display: block;
     margin-top: 20px;
@@ -182,6 +188,7 @@ nav ul li a:hover{
   }
   .menu-icon{
     display: block;
+    margin-right: 2%;
   }
   .color-box{
     width: 100%;
@@ -198,6 +205,7 @@ nav ul li a:hover{
   }
   .col-1{
     margin-left: 0;
+    margin-bottom: 0;
   }
   .col-2{
     flex-basis: 100%;
