@@ -19,8 +19,6 @@
 .container{
   width: 100;
   min-height: 100vh;
-  padding-left: 8%;
-  padding-right: 8%;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -35,7 +33,7 @@
 .nav-title{
   width: 150px;
   cursor: pointer;
-  margin: 30px 0;
+  margin: 30px 90px;
 }
 .nav-title li{
   list-style: none;
@@ -43,8 +41,8 @@
 
 .nav-title li a{
   text-decoration: none;
-  color: #466bff;
-  font-size: 30px;
+  color: #3f62ee;
+  font-size: 20px;
   font-weight: 900;
   font-family: 'Montserrat-Ace-Bold';
 }
@@ -64,12 +62,11 @@ nav ul li{
   display: inline-block;
   margin-right: 30px;
   text-align: center;
-  padding-top: 25px;
 }
 nav ul li a{
   text-decoration: none;
   color: #6d7b93;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
@@ -77,7 +74,7 @@ nav ul li button{
   font-weight: bold;
   width: 120px;
   border: 0;
-  padding: 12px 10px;
+  padding: 8px 6px;
   outline: none;
   color: #FFFF;
   background: linear-gradient(to right, #3454d4,#3454d2);
