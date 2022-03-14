@@ -27,13 +27,14 @@
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: rgba(236, 14, 14, 0.418);
+  background-color: rgba(255, 255, 255, 0.87);
+  border-color: #FFFF;
 }
 
 .nav-title{
   width: 150px;
   cursor: pointer;
-  margin: 30px 90px;
+  margin: 30px 100px;
 }
 .nav-title li{
   list-style: none;
@@ -63,6 +64,7 @@ nav ul li{
   display: inline-block;
   margin-right: 30px;
   text-align: center;
+  bottom: 10%;
 }
 nav ul li a{
   text-decoration: none;
@@ -142,10 +144,10 @@ nav ul li a:hover{
 .color-box{
   position: absolute;
   right: 0;
-  bottom: 29%;
+  bottom: 0;
   background: linear-gradient(to right, #344fe7,#0329ff);
-  height: 100%;
-  width: 80%;
+  height: 150%;
+  width: 100%;
   z-index: -1;
 }
 
@@ -155,24 +157,33 @@ nav ul li a:hover{
   height: 57%;
 }
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:850px){
   nav ul{
     width: 100%;
-    background: linear-gradient(to right, #344fe7,#0329ff);
+    background: linear-gradient(to right, #4864ff,#0329ff);
     position: absolute;
-    top: 75px;
+    top: 84px;
     right: 0;
     z-index: 2;
   }
   nav ul li{
     display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   nav ul li a{
     color: #ffff;
   }
   .menu-icon{
     display: block;
+  }
+  #menuList{
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: none;
+  }
+  .row{
+    flex-direction: column-reverse;
+    margin: 50px 0;
   }
 }
