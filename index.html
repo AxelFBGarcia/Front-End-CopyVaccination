@@ -10,7 +10,7 @@
 <body>
   <div class="container">
     <div class="navbar">
-      <div class="nav-title"><li><a href="">Vaccination</a></li></div>
+      <div class="nav-title"><li><a href="index.html">Vaccination</a></li></div>
       <nav>
         <ul id="menuList">
             <li><a href="">Database</a></li>
@@ -22,7 +22,6 @@
       </nav>
       <img src="img/menu-icon.png" class="menu-icon" onclick="togglemenu()">
     </div>
-
     <div class="row">
       <div class="col-1">
         <h2>Fight Virus <br> With Vaccines</h2>
@@ -37,6 +36,12 @@
         <div class="color-box"></div>
       </div>
     </div>
+    <div class="vlogo">
+      <img src="img/astrazeneca.png" class="ast">
+      <img src="img/sinovac.png" class="sin">
+      <img src="img/pfizer.png" class="pfi">
+      <img src="img/moderna.png" class="mod">
+    </div>
   </div>
     <script>
 
@@ -47,7 +52,7 @@
       function togglemenu(){
         if (menuList.style.maxHeight <= "0px")
           {
-             menuList.style.maxHeight = "180px";
+             menuList.style.maxHeight = "240px";
           }
         else
           {
@@ -55,6 +60,6 @@
           }
       }
     </script>
-
+    
 </body>
 </html>

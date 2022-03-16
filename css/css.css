@@ -43,7 +43,7 @@
 .nav-title li a{
   text-decoration: none;
   color: #3f62ee;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 900;
   font-family: 'Montserrat-Ace-Bold';
 }
@@ -74,7 +74,7 @@ nav ul li{
 nav ul li a{
   text-decoration: none;
   color: #6d7b93;
-  font-size: 12px;
+  font-size: 14px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
@@ -85,7 +85,7 @@ nav ul li button{
   padding: 8px 6px;
   outline: none;
   color: #FFFF;
-  background: linear-gradient(to right, #344fe7,#0329ff);
+  background: linear-gradient(to right, #3e5afa,#0314ff);
   border-radius: 3px;
   cursor: pointer;
   box-shadow:
@@ -100,19 +100,25 @@ nav ul li a:hover{
 .row{
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 30px 0;
+}
 
+.navbar::after{
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-top: 70px solid #f4f6fb;
+  margin-left: 25px;
+  align-items: center;
 }
 
 .col-1{
   flex-basis: 40%;
   position: relative;
-  margin-left: 90px;
-  margin-bottom: 400px;
+  left: 90px;
 }
 .col-1 h2{
-  font-size: 50px;
+  font-size: 60px;
   font-weight: bold;
   color: #1f3e72;
   font-family: 'Montserrat-Ace-Bold';
@@ -127,33 +133,43 @@ nav ul li a:hover{
 .col-1 p{
   font-size: 16px;
   color: #6d7b93;
-  font-weight: 100;
-}
-
-.col-1 p{
+  font-weight: bold;
   margin-top: 30px;
-  font: 20 px;
+  font-size: 20px;
 }
 
 .col-2{
   position: relative;
-  flex-basis: 60%;
-  display: flex;
   align-items: center;
+  height: 50%;
 }
 
 .col-2 .nurse{
-  width: 50%;
-  margin-left: 40%;
+  position: relative;
+  width: 40%;
+  left: 54%;
 }
 
 .color-box{
   position: absolute;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to right, #344fe7,#0329ff);
+  background: linear-gradient(to right, #5770ff,#0314ff);
   height: 150%;
-  width: 70%;
+  width: 50%;
+  z-index: -1;
+}
+
+.color-box::after{
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 60%;
+  left: -110px;
+  border-top: 110px solid transparent;
+  border-bottom: 110px solid transparent;
+  border-right: 110px solid #f4f6fb;
   z-index: -1;
 }
 
@@ -163,7 +179,41 @@ nav ul li a:hover{
   height: 57%;
 }
 
-@media only screen and (max-width:910px){
+.vlogo{
+  position: relative;
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+
+.ast{
+  width: 10%;
+  left: 5%;
+  position: relative;
+}
+
+.sin{
+  width: 10%;
+  left: 25%;
+  position: relative;
+}
+
+.pfi{
+  width: 10%;
+  left: 40%;
+  position: relative;
+}
+
+.mod{
+  width: 10%;
+  left: 55%;
+  position: relative;
+}
+
+/* Responsive properties*/
+
+@media only screen and (max-width:950px){
   nav ul{
     width: 100%;
     background: linear-gradient(to right, #4864ff,#0329ff);
@@ -199,20 +249,45 @@ nav ul li a:hover{
     transition: 0.5s;
     box-shadow: none;
   }
+  nav ul li button{
+    font-weight: bold;
+    width: 120px;
+    border: 0;
+    padding: 0;
+    outline: none;
+    color: #FFFF;
+    background: transparent;
+    border-radius: 0;
+    cursor: pointer;
+    box-shadow: none;
+  }
   .row{
     flex-direction: column;
     margin: 50px 0;
   }
   .col-1{
-    margin-left: 0;
+    left: 0;
     margin-bottom: 0;
+    flex-basis: 100%;
+    flex-direction: column;
+
   }
   .col-2{
-    flex-basis: 100%;
     margin-top: 50px;
   }
   .col-2 .nurse{
     width: 77%;
-    margin-left: 7%;
+    position: relative;
+    left: 10%;
+    align-items: center;
+  }
+  .col-1{
+    flex-basis: 100%;
+  }
+  .col-1 h2{
+    font-size: 35px;
+  }
+  .col-1 h3{
+    font-size: 13px;
   }
 }
