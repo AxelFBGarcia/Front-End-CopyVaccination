@@ -48,6 +48,26 @@
   font-family: 'Montserrat-Ace-Bold';
 }
 
+.triangle-down {
+  width: 10%;
+  height: 0;
+  padding-left:5%;
+  padding-top: 5%;
+  overflow: hidden;
+}
+.triangle-down:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left:-75px;
+  margin-top:-85px;
+  
+  border-left: 85px solid transparent;
+  border-right: 85px solid transparent;
+  border-top: 85px solid #f4f6fb;
+}
+
 .menu-icon{
   width: 45px;
   cursor: pointer;
@@ -100,6 +120,7 @@ nav ul li a:hover{
 .row{
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .navbar::after{
@@ -116,51 +137,58 @@ nav ul li a:hover{
   flex-basis: 40%;
   position: relative;
   left: 90px;
+  top: 25px;
 }
-.col-1 h2{
-  font-size: 60px;
+.fi{
+  font-size: 65px;
   font-weight: bold;
   color: #1f3e72;
   font-family: 'Montserrat-Ace-Bold';
+  margin-bottom: 35px;
 }
 .col-1 h3{
-  font-size: 13px;
+  font-size: 14px;
   color: #1f3e72;
-  font-weight: 100;
   display: inline-block;
+  font-weight: bold;
 }
 
 .col-1 p{
   font-size: 16px;
   color: #6d7b93;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 10px;
   font-size: 20px;
 }
 
 .col-2{
   position: relative;
   align-items: center;
-  height: 50%;
+  flex-basis: 60%;
+  position: relative;
 }
 
 .col-2 .nurse{
   position: relative;
-  width: 40%;
-  left: 54%;
+  height: auto;
+  top: 4px;
+  width: 31.5vw;
+  left: 44%;
 }
 
 .color-box{
+  display: flex;
+  flex-basis: 40%;
   position: absolute;
   right: 0;
   bottom: 0;
   background: linear-gradient(to right, #5770ff,#0314ff);
-  height: 150%;
-  width: 50%;
+  height: 55vw;
+  width: 35vw;
   z-index: -1;
 }
 
-.color-box::after{
+/*.color-box::after{
   content: '';
   width: 0;
   height: 0;
@@ -171,13 +199,7 @@ nav ul li a:hover{
   border-bottom: 110px solid transparent;
   border-right: 110px solid #f4f6fb;
   z-index: -1;
-}
-
-.col-1::after{
-  content: '';
-  width: 10px;
-  height: 57%;
-}
+}*/
 
 .vlogo{
   position: relative;
@@ -185,6 +207,8 @@ nav ul li a:hover{
   display: flex;
   align-items: center;
   height: 50%;
+  margin-top: 70px;
+  margin-bottom: 30px;
 }
 
 .ast{
@@ -211,9 +235,114 @@ nav ul li a:hover{
   position: relative;
 }
 
+.cont{
+  padding-top: 60px; 
+
+}
+
+.sh{
+  width: 19px;
+  height: 21px;
+  padding-right: 15px;
+  padding-left: 40px;
+  vertical-align: middle;
+}
+
+.st{
+  width: 21px;
+  height: 21px;
+  padding-right: 15px;
+  padding-left: 45px;
+  vertical-align: middle;
+}
+
+.clock{
+  width: 21px;
+  height: 21px;
+}
+
+.shv{
+  font-size: 21px;
+  margin-bottom: 0;
+  position: relative;
+  top: 180px;
+  left: 38px;
+  font-weight: bold;
+  color: #1f3e72;
+  font-family: 'Montserrat-Ace-Bold';
+}
+
+/*Form responsive*/
+.fm{
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.87);
+  position: relative;
+  flex-direction: column;
+  top: 180px;
+  left: 38px;
+  z-index: 2;
+}
+
+.ln{
+  flex-flow: column;
+}
+
+.de{
+  flex-flow: column;
+}
+
+.vt{
+  flex-flow: column;
+}
+.but{
+  flex-flow: column;
+}
+
+.form-inline {  
+  display: flex;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  font-weight: bold;
+  width: 120px;
+  border: 0;
+  padding: 8px 6px;
+  outline: none;
+  color: #FFFF;
+  background: linear-gradient(to right, #3e5afa,#0314ff);
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 47, 255, 0.144),
+  0 5px 2px rgba(0, 0, 0, 0.08)
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
 /* Responsive properties*/
 
-@media only screen and (max-width:950px){
+@media only screen and (max-width:1020px){
+  .triangle-down {
+    width: 0;
+    height: 0;
+    padding-left:0;
+    padding-top: 0;
+  }
   nav ul{
     width: 100%;
     background: linear-gradient(to right, #4864ff,#0329ff);
@@ -272,8 +401,14 @@ nav ul li a:hover{
     flex-direction: column;
 
   }
+  .shv{
+    top: 20px;
+  }
+  .fm{
+    top: 40px;
+  }
   .col-2{
-    margin-top: 50px;
+    margin-top: 100px;
   }
   .col-2 .nurse{
     width: 77%;
@@ -282,12 +417,29 @@ nav ul li a:hover{
     align-items: center;
   }
   .col-1{
-    flex-basis: 100%;
+    display: flex;
+    flex-basis: 60%;
+    position: relative;
+    padding-left: 20%;
+    padding-right: 20%;
+    left: 60%;
+    top: 100%;
+    transform: translate(-60%, 0%);
   }
   .col-1 h2{
     font-size: 35px;
   }
   .col-1 h3{
     font-size: 13px;
+  }
+  .cont{
+    position: relative;
+  }
+  .form-inline input {
+    margin: 10px 0;
+  }
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
